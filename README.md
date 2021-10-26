@@ -1,13 +1,14 @@
 # bbs-l2
 
-Run a local optimism node (https://github.com/ethereum-optimism/optimism-tutorial/tree/main/hardhat). Stop just befor the 'Migrate a Dapp to Optimistic Ethereum' section.
 
-the last command you wrote was:
-docker-compose -f docker-compose-nobuild.yml up -t 3600
-and your local node is up.
+Take note:
+If you get the error, 'could not detect network', after running the local node,
+just keep on trying (it may take a minute or tow).
 
-[This last command can be interchanged with to run a local node
-  docker-compose up
-use
-  docker-compose down
-to end]
+IMPORTANT:
+After executing scripts/initL2.js you will get console prints
+  L1_ERC20 deployed [0xAddress]
+  L2_ERC20 deployed [0xAddress]
+COPY THOSE ADDRESSES INTO test/test.js consts
+  L2BBS_ADDRESS
+  L1BBS_ADDRESS
